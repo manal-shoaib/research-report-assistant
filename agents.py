@@ -1,3 +1,11 @@
+
+try:
+    import crewai.llms.cache as crew_cache
+    crew_cache.mark_cache_breakpoint = lambda msg: msg
+except Exception:
+    pass
+
+
 from crewai import Agent, LLM
 
 from config import MODEL_NAME
