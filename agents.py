@@ -1,11 +1,10 @@
 from crewai import Agent, LLM
 
-from config import MODEL_NAME, GROQ_API_KEY
+from config import MODEL_NAME
 
 
 llm = LLM(
     model=f"groq/{MODEL_NAME}",
-    api_key=GROQ_API_KEY,
     temperature=0.2,
 )
 
